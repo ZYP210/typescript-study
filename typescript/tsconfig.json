@@ -1,0 +1,37 @@
+{
+  //编译器选项
+  "compilerOptions": {
+    "target": "es2015", //指定ts被编译成的js版本 (esnext :最新版本的ES)
+    "module": "amd", //指定要使用的模块化方案
+    "lib": [
+      "dom",
+      "es6"
+    ],
+    "outDir": "./dist", //指定编译后文件输出的目录
+    "outFile": "./dist/index.js", //将输出的代码合并成一个文件
+    "allowJs": false, //是否对js文件进行编译
+    "checkJs": false, // 是否对js文件进行语法检查
+    "removeComments": false, //不编译注释
+    "noEmit": false, //不生成编译后文件
+    "noEmitOnError": false, //当有错误时，不生成编译文件
+    "alwaysStrict": false, //编译后的文件也使用严格模式(use strict)
+    "noImplicitAny": false, //不允许隐式的any类型
+  },
+  //不需要被编译的目录 :默认值 ["node_modules"，"bower_components"，"jspm_packages"]
+  "exclude": [
+    "node_modules",
+    "bower_components",
+    "jspm_packages"
+  ],
+  //include 用来指定哪些ts文件需要编译【匹配模式列表】
+  "include": [
+    "./src/**/*.ts"
+  ],
+  //继承其他的config文件
+  // "extends": "tsconfig1.json",
+  //指定需要编译的文件
+  "files": [
+    "泛型.ts",
+    "类.ts"
+  ],
+}
